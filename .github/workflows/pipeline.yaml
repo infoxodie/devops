@@ -10,7 +10,7 @@ on:
       - test
       - prod
       - staging
-      -main
+      - main
 
 jobs:
   build:
