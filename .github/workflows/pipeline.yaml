@@ -38,6 +38,8 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
         run: |
           #docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
-          docker build -t 339713131846.dkr.ecr.us-east-1.amazonaws.com/repodiego:latest
-          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
           echo "::set-output name=image::$REGISTRY/$REPOSITORY:$IMAGE_TAG"
+
+          docker build -t repodiego:latest
+          docker push repodiego:latest
+          #echo "::set-output name=image::$REGISTRY/$REPOSITORY:$IMAGE_TAG"
