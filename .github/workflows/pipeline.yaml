@@ -35,8 +35,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: repodiego
-          #IMAGE_TAG: ${{ github.sha }}
           IMAGE_TAG: testtag
         run: |
-          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
-          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG 
+          docker build -t 339713131846.dkr.ecr.us-east-1.amazonaws.com/repodiego:testtag .
+          docker push 339713131846.dkr.ecr.us-east-1.amazonaws.com/repodiego:testtag 
